@@ -1,0 +1,194 @@
+/* Programmer Name: 73 */
+/* CSS styling for all pages, dropdown checkbox lists, and the formatting of displaying the */
+/* top 3 most followed users */
+
+/* General Background Styling for pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Basic grey and white Styling for fieldset legend */
+legend {
+    background-color: #454545;
+    color: #FFFFFF;
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for inputs and their selection */
+input, select {
+    margin: 0.4rem;
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    border: 1px solid #424242;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+/* Further styling for fieldset and titles */
+
+h1, h2, h3, p {
+    color: #BDBDBD;
+    margin-left: 15px;
+    text-shadow: 1px 1px 2px black;
+}
+
+fieldset {
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #525252;
+    background-color: #333333;
+    color: #E0E0E0;
+    border-radius: 8px;
+}
+
+/* Styling for unordered lists in fieldset */
+fieldset ul {
+    padding-left: 30px;
+    list-style-type: disc;
+}
+
+/* Controls the styling of the multipleSelection class */
+/* (i.e., the dropdown checkbox lists)  */
+.multipleSelection {
+    width: 300px;
+    background-color: #333333;
+    margin-bottom: 20px;
+    color: #E0E0E0;
+}
+
+.selectBox {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.selectBox > label {
+    display: block;
+    width: calc(100% - 16px);
+    margin: 0 auto;
+    background-color: #4A4A4A;
+    padding: 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* In general, the following "checkboxes" styling rules control the interactive styling of the */
+/* checkboxes in a given dropdown list (once selected) - they correspond to the dynamically
+   generated lists in getfollowing.php, which are used for modifying whom the user follows */
+#queryUsersCheckboxes, #followingCheckboxes, #notFollowingCheckboxes {
+    display: none;
+    border: 1px #8DF5E4 solid;
+}
+#queryUsersCheckboxes label, #followingCheckboxes label, #notFollowingCheckboxes label {
+    display: block;
+    color: #E0E0E0;
+    padding-left: 10px;
+}
+#queryUsersCheckboxes label:hover, #followingCheckboxes label:hover, #notFollowingCheckboxes label:hover {
+    background-color: #525252;
+    cursor: pointer;
+}
+
+/* Styling for submit buttons */
+button, .btn, input[type="submit"] {
+    background-color: #26A69A;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover {
+    background-color: #1E8875;
+}
+
+/* Styling for text inputs */
+input[type="text"], select {
+    background-color: #2C2C2C;
+    border: 1px solid #B2DFDB;
+    color: #E0E0E0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*input[type="url"], select {*/
+/*    background-color: #2C2C2C;*/
+/*    border: 1px solid #B2DFDB;*/
+/*    color: #E0E0E0;*/
+/*    padding: 10px;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/* fieldset styling for neatly displaying the top 3 users most followed in displaytop3users.php */
+fieldset[name="top_user"] {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    background-color: #333333;
+    color: #E0E0E0;
+}
+.rank .top3_display img, .top3_display h2, .top3_display h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    text-align: left;
+
+}
+
+/* Adjusting position of the the user's image whenever it is displayed, for a cleaner
+   more centered look */
+fieldset[name="chosen_user"] img {
+    margin-left: 40px;
+}
+
+fieldset[name="top_user"] img {
+    margin-left: 40px;
+}
+
+fieldset[name="top_user"] legend {
+    font-size: 20px;
+}
+
+fieldset[name="top_user"] h2 {
+    font-size: 28px;
+}
+
+fieldset[name="top_user"] h3 {
+    font-size: 22px;
+}
+
